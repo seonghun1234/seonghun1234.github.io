@@ -6,6 +6,8 @@
     <title>Seonghun's Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
     <style>
         /* 자동완성된 텍스트 스타일 초기화 */
         input:-webkit-autofill,
@@ -299,12 +301,12 @@
             <div class="mt-6 text-gray-300 space-y-4">
                 <!-- 전화번호 -->
                 <div class="flex items-center space-x-4">
-                    <span class="text-blue-400 text-lg font-bold w-32">Phone:</span>
-                    <p class="text-gray-300 ">010-3846-3495</p>
+                    <span class="text-blue-400 text-lg font-bold w-16">Phone</span>
+                    <p class="text-gray-300">010-3846-3495</p>
                 </div>
                 <!-- 이메일 -->
                 <div class="flex items-center space-x-4">
-                    <span class="text-blue-400 text-lg font-bold w-32">Email:</span>
+                    <span class="text-blue-400 text-lg font-bold w-16">Email</span>
                     <p class="text-gray-300">s3496h@gmail.com</p>
                 </div>
                 <!-- 학력 -->
@@ -317,8 +319,6 @@
                         <li class="whitespace-nowrap">보문고등학교 (2011.03.02 ~ 2014.03.02)</li>
                     </ul>
                 </div>
-
-
 
                 <!-- 커리큘럼 -->
                 <div class="flex flex-col space-y-2">
@@ -335,16 +335,20 @@
 
                 <!-- 깃허브 -->
                 <div class="flex items-center space-x-4">
-                    <span class="text-blue-400 text-lg font-bold">GitHub:</span>
-                    <a href="https://github.com/seonghun1234" class="text-blue-400 hover:underline" target="_blank">My
-                        GitHub</a>
+                    <span class="text-blue-400 text-lg font-bold">GitHub</span>
+                    <a href="https://github.com/seonghun1234" class="text-gray-300 hover:text-black text-2xl" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
                 </div>
+
                 <!-- 벨로그 -->
                 <div class="flex items-center space-x-4">
-                    <span class="text-blue-400 text-lg font-bold">Velog:</span>
-                    <a href="https://velog.io/@s3498g" class="text-blue-400 hover:underline" target="_blank">My
-                        Velog</a>
+                    <span class="text-blue-400 text-lg font-bold">Velog</span>
+                    <a href="https://velog.io/@s3498g" class="text-gray-300 hover:text-green-400 text-2xl pl-3" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M3 0C1.338 0 0 1.338 0 3v18c0 1.662 1.338 3 3 3h18c1.662 0 3-1.338 3-3V3c0-1.662-1.338-3-3-3zm6.883 6.25q.945 0 1.125.9l1.463 8.303q.697-.923 1.146-1.553a14 14 0 0 0 1.283-2.273q.608-1.283.608-2.295q0-.607-.338-.967q-.315-.382-1.193-.967q.9-1.148 2.25-1.148q.72 0 1.193.428q.495.427.494 1.26q0 1.395-1.17 3.488q-1.147 2.07-4.431 6.232l-2.227.156l-1.711-9.628h-2.25V7.24q.9-.293 2.115-.63q1.215-.36 1.643-.36"/></svg>
+                    </a>
                 </div>
+
             </div>
 
             <!-- 버튼 -->
@@ -446,19 +450,7 @@
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div class="card w-full h-64">
                 <div class="card-inner">
-                    <div class="card-front bg-cover bg-center" style="background-image: url('images/project5.PNG');">
-                    </div>
-                    <div class="card-back">
-                        <h3 class="text-lg font-bold">의류를 판매하는 의류전문 쇼핑몰</h3>
-                        <p class="text-gray-300">이클립스와 jsp를 사용하여 개발되었습니다.</p>
-                        <a href="https://github.com/seonghun1234/project" class="text-blue-400 hover:underline mt-2">View on GitHub</a>
-                    </div>
-                </div>
-                <p class="text-white-800 text-lg font-bold">의류 쇼핑몰</p>
-            </div>
-            <div class="card w-full h-64">
-                <div class="card-inner">
-                    <div class="card-front bg-cover bg-center" style="background-image: url('images/project6.png');">
+                    <div class="card-front bg-cover bg-center" style="background-image: url('images/project7.png');">
                     </div>
                     <div class="card-back">
                         <h3 class="text-lg font-bold">반려견과 함께하는 행복한 생활을 위한 통합 플랫폼
@@ -486,7 +478,7 @@
 
             <div class="card w-full h-64">
                 <div class="card-inner">
-                    <div class="card-front bg-cover bg-center" style="background-image: url('images/project4.png');">
+                    <div class="card-front bg-cover bg-center" style="background-image: url('images/project8.png');">
                     </div>
                     <div class="card-back">
                         <h3 class="text-lg font-bold">일정관리 사이트
@@ -497,6 +489,20 @@
                 </div>
                 <p class="text-white text-lg font-bold">Todo app</p>
             </div>
+
+            <div class="card w-full h-64">
+                <div class="card-inner">
+                    <div class="card-front bg-cover bg-center" style="background-image: url('images/portfolio.png');">
+                    </div>
+                    <div class="card-back">
+                        <h3 class="text-lg font-bold">Portfolio</h3>
+                        <p class="text-gray-300">Github io 를 이용하여 제작한 포트폴리오 입니다.</p>
+                        <a href="https://github.com/seonghun1234/seonghun1234.github.io.git" class="text-blue-400 hover:underline mt-2">View on GitHub</a>
+                    </div>
+                </div>
+                <p class="text-white-800 text-lg font-bold">My Portfolio</p>
+            </div>
+
         </div>
     </div>
 </section>

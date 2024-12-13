@@ -7,6 +7,13 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <style>
+        /* 자동완성된 텍스트 스타일 초기화 */
+        input:-webkit-autofill,
+        textarea:-webkit-autofill {
+            -webkit-box-shadow: 0 0 0px 1000px #1a202c inset; /* 배경색 초기화 (bg-gray-800) */
+            -webkit-text-fill-color: #e2e8f0; /* 텍스트 색상 초기화 (text-gray-200) */
+        }
+
         /* 배경 움직임 효과 */
         body::before {
             content: "";
@@ -276,7 +283,8 @@
             </p>
         </div>
         <!-- 이미지 섹션 -->
-        <div class="relative bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg p-8 shadow-lg max-w-md mx-auto" data-aos="fade-left" data-aos-duration="1000">
+        <div class="relative bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg p-8 shadow-lg max-w-md mx-auto"
+             data-aos="fade-left" data-aos-duration="1000">
             <!-- 프로필 사진 -->
             <div class="flex justify-center -mt-20">
                 <img src="images/portfolio1.jpg" alt="프로필 이미지"
@@ -292,7 +300,7 @@
                 <!-- 전화번호 -->
                 <div class="flex items-center space-x-4">
                     <span class="text-blue-400 text-lg font-bold w-32">Phone:</span>
-                    <p class="text-gray-300">010-3846-3495</p>
+                    <p class="text-gray-300 ">010-3846-3495</p>
                 </div>
                 <!-- 이메일 -->
                 <div class="flex items-center space-x-4">
@@ -300,30 +308,49 @@
                     <p class="text-gray-300">s3496h@gmail.com</p>
                 </div>
                 <!-- 학력 -->
-                <div class="flex items-center space-x-4">
-                    <span class="text-blue-400 text-lg font-bold w-32">Education:</span>
-                    <p class="text-gray-300">프롬프트AI & Open API & 공공데이터를 활용한 웹/앱 개발자 양성 과정 </p>
+                <div class="flex flex-col space-y-2">
+                    <!-- 제목 -->
+                    <span class="text-blue-400 text-lg font-bold">Education</span>
+                    <!-- 리스트 형식 -->
+                    <ul class="list-disc list-inside text-gray-300">
+                        <li class="whitespace-nowrap">방송통신대학교 (2019.03.01 ~ 2023.02.22)</li>
+                        <li class="whitespace-nowrap">보문고등학교 (2011.03.02 ~ 2014.03.02)</li>
+                    </ul>
                 </div>
+
+
+
                 <!-- 커리큘럼 -->
-                <div class="flex items-center space-x-4">
-                    <span class="text-blue-400 text-lg font-bold w-32">Curriculum:</span>
-                    <a href="curriculum.pdf" class="text-blue-400 hover:underline" target="_blank">Download</a>
+                <div class="flex flex-col space-y-2">
+                    <!-- 제목 -->
+                    <span class="text-blue-400 text-lg font-bold">Curriculum</span>
+                    <!-- 리스트 형식 -->
+                    <ul class="list-disc list-inside text-gray-300">
+                        <li class="whitespace-normal leading-relaxed">
+                            프롬프트AI & Open API & 공공데이터를 활용한 <br>
+                            <span class="block pl-6">웹/앱 개발자 양성 과정</span>
+                        </li>
+                    </ul>
                 </div>
+
                 <!-- 깃허브 -->
                 <div class="flex items-center space-x-4">
-                    <span class="text-blue-400 text-lg font-bold w-32">GitHub:</span>
-                    <a href="https://github.com/seonghun-dev" class="text-blue-400 hover:underline" target="_blank">github.com/seonghun-dev</a>
+                    <span class="text-blue-400 text-lg font-bold">GitHub:</span>
+                    <a href="https://github.com/seonghun1234" class="text-blue-400 hover:underline" target="_blank">My
+                        GitHub</a>
                 </div>
                 <!-- 벨로그 -->
                 <div class="flex items-center space-x-4">
-                    <span class="text-blue-400 text-lg font-bold w-32">Velog:</span>
-                    <a href="https://velog.io/@seonghun-dev" class="text-blue-400 hover:underline" target="_blank">velog.io/@seonghun-dev</a>
+                    <span class="text-blue-400 text-lg font-bold">Velog:</span>
+                    <a href="https://velog.io/@s3498g" class="text-blue-400 hover:underline" target="_blank">My
+                        Velog</a>
                 </div>
-            </
+            </div>
 
             <!-- 버튼 -->
             <div class="mt-6 flex justify-center">
-                <a href="#contact" class="btn bg-blue-500 text-white font-bold px-6 py-3 rounded-lg shadow hover:bg-blue-600 transition">
+                <a href="#contact"
+                   class="btn bg-blue-500 text-white font-bold px-6 py-3 rounded-lg shadow hover:bg-blue-600 transition">
                     Contact Me
                 </a>
             </div>
@@ -333,58 +360,140 @@
 </section>
 
 
-
 <!-- Skills Section -->
 <section id="skills" class="py-20 bg-gray-800">
     <div class="container mx-auto px-6">
         <h2 class="text-3xl font-bold mb-6 text-center" data-aos="zoom-in">Skills</h2>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-            <div data-aos="flip-left" data-aos-duration="800">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-                     alt="JavaScript" class="w-16 h-16 mx-auto">
-                <p class="mt-4 font-medium">JavaScript</p>
+
+        <!-- Frontend Skills -->
+        <div class="mb-12">
+            <h3 class="text-2xl font-semibold mb-4 text-left text-gray-200">Frontend</h3>
+            <div class="grid grid-cols-2 md:grid-cols-8 gap-6">
+                <div data-aos="flip-left" data-aos-duration="800" class="flex flex-col items-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                         alt="JavaScript" class="w-16 h-16">
+                    <p class="mt-4 font-medium text-center">JavaScript</p>
+                </div>
+                <div data-aos="flip-left" data-aos-duration="900" class="flex flex-col items-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                         alt="React" class="w-16 h-16">
+                    <p class="mt-4 font-medium text-center">React</p>
+                </div>
+                <div data-aos="flip-left" data-aos-duration="900" class="flex flex-col items-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                         alt="css3" class="w-16 h-16">
+                    <p class="mt-4 font-medium text-center">CSS</p>
+                </div>
+                <div data-aos="flip-left" data-aos-duration="900" class="flex flex-col items-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                         alt="HTML5" class="w-16 h-16">
+                    <p class="mt-4 font-medium text-center">HTML</p>
+                </div>
+                <div data-aos="flip-left" data-aos-duration="900" class="text-center">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/tailwindcss.svg"
+                         alt="Tailwind CSS" class="w-16 h-16 mx-auto fill-current text-blue-500">
+                    <p class="mt-4 font-medium">Tailwind CSS</p>
+                </div>
+                <div data-aos="flip-left" data-aos-duration="900" class="flex flex-col items-center">
+                    <img src="https://raw.githubusercontent.com/thymeleaf/thymeleaf.github.io/master/images/thymeleaf.png"
+                         alt="Thymeleaf" class="w-16 h-16">
+                    <p class="mt-4 font-medium text-center">Thymeleaf</p>
+                </div>
+                <div data-aos="flip-left" data-aos-duration="900" class="flex flex-col items-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+                         alt="HTML5" class="w-16 h-16">
+                    <p class="mt-4 font-medium text-center">VSCode</p>
+                </div>
             </div>
-            <div data-aos="flip-left" data-aos-duration="900">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"
-                     class="w-16 h-16 mx-auto">
-                <p class="mt-4 font-medium">React</p>
+        </div>
+
+        <!-- Backend Skills -->
+        <div class="mb-12">
+            <h3 class="text-2xl font-semibold mb-4 text-left text-gray-200">Backend</h3>
+            <div class="grid grid-cols-2 md:grid-cols-8 gap-6">
+                <div data-aos="flip-left" data-aos-duration="1000" class="flex flex-col items-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"
+                         alt="Spring Boot" class="w-16 h-16">
+                    <p class="mt-4 font-medium text-center">Spring Boot</p>
+                </div>
+                <div data-aos="flip-left" data-aos-duration="1000" class="flex flex-col items-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+                         alt="java" class="w-16 h-16">
+                    <p class="mt-4 font-medium text-center">Java</p>
+                </div>
             </div>
-            <div data-aos="flip-left" data-aos-duration="1000">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"
-                     alt="Spring Boot" class="w-16 h-16 mx-auto">
-                <p class="mt-4 font-medium">Spring Boot</p>
-            </div>
-            <div data-aos="flip-left" data-aos-duration="1100">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker"
-                     class="w-16 h-16 mx-auto">
-                <p class="mt-4 font-medium">Docker</p>
+        </div>
+
+        <!-- Database Skills -->
+        <div>
+            <h3 class="text-2xl font-semibold mb-4 text-left text-gray-200">Database</h3>
+            <div class="grid grid-cols-2 md:grid-cols-8 gap-6">
+                <div data-aos="flip-left" data-aos-duration="1200" class="flex flex-col items-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                         alt="MySQL" class="w-16 h-16">
+                    <p class="mt-4 font-medium text-center">MySQL</p>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
+
 <!-- Projects Section -->
 <section id="projects" class="py-20">
     <div class="container mx-auto px-6">
         <h2 class="text-3xl font-bold mb-6 text-center" data-aos="fade-down">Projects</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div class="card w-full h-64">
                 <div class="card-inner">
-                    <div class="card-front">Project 1</div>
+                    <div class="card-front bg-cover bg-center" style="background-image: url('images/project5.PNG');">
+                        <p class="text-white text-lg font-bold">의류 쇼핑몰</p>
+                    </div>
                     <div class="card-back">
                         <h3 class="text-lg font-bold">E-commerce Platform</h3>
-                        <p class="text-gray-300">Built with Spring Boot and React.</p>
-                        <a href="#" class="text-blue-400 hover:underline mt-2">View on GitHub</a>
+                        <p class="text-gray-300">이클립스와 jsp를 사용하여 개발되었습니다.</p>
+                        <a href="https://github.com/seonghun1234/project" class="text-blue-400 hover:underline mt-2">View on GitHub</a>
                     </div>
                 </div>
             </div>
             <div class="card w-full h-64">
                 <div class="card-inner">
-                    <div class="card-front">Project 2</div>
+                    <div class="card-front bg-cover bg-center" style="background-image: url('images/project6.PNG');">
+                        <p class="text-white text-lg font-bold">TailsRoute</p>
+                    </div>
                     <div class="card-back">
-                        <h3 class="text-lg font-bold">Pet Community App</h3>
-                        <p class="text-gray-300">CRUD features and alarm system.</p>
-                        <a href="#" class="text-blue-400 hover:underline mt-2">View on GitHub</a>
+                        <h3 class="text-lg font-bold">반려견과 함께하는 행복한 생활을 위한 통합 플랫폼
+                        </h3>
+                        <p class="text-gray-300">커뮤니티와 24시간 병원정보 제공 및 AI를 활용한 행동분석 제공</p>
+                        <a href="https://github.com/TailsRoute/TailsRoute_PJ" class="text-blue-400 hover:underline mt-2">View on GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card w-full h-64">
+                <div class="card-inner">
+                    <div class="card-front bg-cover bg-center" style="background-image: url('images/project3.png');">
+                        <p class="text-black text-lg font-bold">weather app</p>
+                    </div>
+                    <div class="card-back">
+                        <h3 class="text-lg font-bold">날씨정보와 관광정보 제공 사이트
+                        </h3>
+                        <p class="text-gray-300">공공데이터 포털의 기상청api, 관광정보 api 와 구글 Geolocation api를 활용한 날씨정보, 관광정보 제공 사이트 </p>
+                        <a href="https://github.com/seonghun1234/24_12_02_Exam_jsh-WeatherTour-" class="text-blue-400 hover:underline mt-2">View on GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card w-full h-64">
+                <div class="card-inner">
+                    <div class="card-front bg-cover bg-center" style="background-image: url('images/project4.png');">
+                        <p class="text-black text-lg font-bold">Todo app</p>
+                    </div>
+                    <div class="card-back">
+                        <h3 class="text-lg font-bold">일정관리 사이트
+                        </h3>
+                        <p class="text-gray-300">할 일을 적어놓고 완료 미완료등 일정관리를 할 수 있다.</p>
+                        <a href="https://github.com/seonghun1234/24_10_todoapp" class="text-blue-400 hover:underline mt-2">View on GitHub</a>
                     </div>
                 </div>
             </div>
